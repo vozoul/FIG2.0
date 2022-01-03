@@ -1,0 +1,26 @@
+:root {
+  /* --bgGlobal: #22272A; */
+  --bgGlobal: #ccc;
+  --tileBackground: #292f33;
+  --primeText: #ffffff;
+  --secondText: #8D8D8D;
+  --bgText: ;
+  --primary: ;
+  --secondary: ;
+  --basisPurple: rgb(139, 52, 139);
+  --in_use: rgba(139, 52, 139, .4);
+  --online: #00D100;
+  --offline: #FF4D4D;
+  --win: var(--online);
+  --equals: orange;
+  --lost: var(--offline);
+  --shadows: #1f2224;
+  --boxShadows: 5px 5px 10px #1f2224;
+  --warning: var(--equals);
+  --info: rgb(255, 255, 190);
+  --borderInfo: rgb(83, 83, 0);
+  --success: rgb(190, 255, 190);
+  --borderSuccess: rgb(0, 83, 0);
+  --error: rgb(255, 190, 190);
+  --borderError: rgb(83, 0, 0);
+}

@@ -1,0 +1,172 @@
+/* Components Styles */
+
+/* start - Score Borad */
+.scoreboard {
+  position: absolute;
+  top: 140px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.scoreboard__header {
+  background-color: var(--hover-2);
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.scoreboard__main {
+  background: var(--hover-1);
+  padding-bottom: 30px;
+  border-radius: 0 0 10px 10px;
+  box-shadow: var(--boxShadows);
+}
+
+.scoreboard__main ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.match {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+}
+
+.match:hover {
+  background-color: var(--bgGlobal);
+}
+
+.match.none {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.competitor {
+  position: relative;
+  display: flex;
+  flex: 3;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--lost);
+}
+
+.win {
+  border-bottom: 1px solid var(--win);
+}
+
+.equal {
+  border-bottom: 1px solid var(--equals);
+}
+
+.team, .score {
+  font-size: 1.2em;
+  font-weight: bolder;
+  margin: 10px 0;
+}
+
+.team {
+  margin: 10px;
+}
+
+.versus {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.scoreGamePic {
+  height: 20px;
+  width: 20px;
+}
+
+.scoreboard__footer {
+  height: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.showEvents {
+  background-color: var(--hover-1);
+  text-align: center;
+  font-size: 2em;
+  font-weight: 600;
+  color: var(--basisPurple);
+  width: 50px;
+  height: 40px;
+  border-radius: 0 0 10px 10px;
+  box-shadow: var(--boxShadows);
+}
+
+.showEvents:hover {
+  background-color: var(--hover-2);
+  color: #ccc;
+}
+/* end - Score Borad */
+
+/* start - Globals forms */
+input[type=text], input[type=email], input[type=password] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+/* end - Globals forms */
+
+/* start - Login form */
+.login_form {
+  height: 100%;
+  width: 100%;
+}
+
+.module {
+  align-self: center;
+  justify-self: center;
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
+  padding: 40px;
+  background: var(--hover-1);
+  border-radius: 0 20px 0 20px;
+  box-shadow: var(--boxShadows);
+}
+
+.module_title {
+  position: absolute;
+  top:-50px;
+  left: 0;
+  line-height: 30px;
+  padding: 10px 20px;
+  background: var(--basisPurple);
+  border-radius: 10px 10px 0 0;
+}
+
+.login > div {
+  width: 80%;
+  margin: auto auto;
+}
+
+.module .button {
+  background: var(--basisPurple);
+  color: #ccc;
+  border: none;
+  line-height: 40px;
+  font-size: 1.2rem;
+  padding: 0 30px;
+  position: absolute;
+  bottom: -40px;
+  right:0;
+  border-radius: 0 0 10px 10px;
+  box-shadow: var(--boxShadows);
+}
+
+.module .button:hover {
+  background: var(--hover-2);
+}

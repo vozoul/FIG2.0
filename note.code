@@ -1,0 +1,92 @@
+
+    <!-- <meta property="og:title" content="Les Figues"> -->
+    <!-- <meta property="og:type" content="website"> -->
+    <!-- <meta property="og:url" content="https://lesfigues.net/"> -->
+    <!-- <meta property="og:image" content="https://lesfigues.net/icon.png"> -->
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <!-- <link rel="apple-touch-icon" href="icon.png"> -->
+
+    <link rel="stylesheet" href="/css/common.css" />
+    <!-- <link rel="stylesheet" href="/css/main.css" /> -->
+    <!-- <link rel="stylesheet" href="/css/styles/nav.css" /> -->
+    <!-- ${css ? css.map(c => `<link rel="stylesheet" href="/css/${c}" />`).join('') : ''} -->
+    <!-- <link
+      rel="stylesheet"
+      type="application/css"
+      href="/fontawesome/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      type="text/css"
+      rel="stylesheet"
+    /> -->
+
+
+
+
+
+
+
+    <!-- <header>
+      <div class="brand">
+        <img class="brand_logo" src="/img/svg/logo.svg" alt="Logo les figues" />
+        <h1 class="brand_name">Les Figues</h1>
+      </div>
+      <div class="main_title">
+        <h1>${title}</h1>
+        <div class="separator"><i class="arrow down"></i></div>
+      </div>
+      <div>
+        <div class="lang"></div>
+        <div class="more">
+          <ul>
+            <li class="more__button">
+              <a href=""><img src="/img/svg/cup.svg" alt="" srcset="" /></a>
+            </li>
+            <li class="more__button">
+              <a href=""
+                >&nbsp;<img src="/img/svg/discord.svg" alt="" srcset=""
+              /></a>
+            </li>
+            <li class="more__button">
+              <a href=""
+                >&nbsp;<img src="/img/svg/steam.svg" alt="" srcset=""
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    ${nav}
+    <main>${page}</main>
+    <footer>
+      <p>
+        &copy; 2021 Created by <b>Loading ...</b> & <b>Vozoul</b>, All rights
+        reserved.
+      </p>
+      <section class="social">
+        <a href="https://discord.gg/AnRrwch"><i class="fab fa-discord"></i></a>
+        <a href="https://steamcommunity.com/groups/lesfigues"
+          ><i class="fab fa-steam"></i
+        ></a>
+      </section>
+    </footer>
+    <widgets>
+      ${scoreBoard}
+    </widgets> -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <main class="content"  style="display: flex;flex-direction: column;height: calc(100vh - 160px); width: 100vw;justify-content: center;align-items: center;">
+        <h2>SCHKREUGNEUGNEU ... C'EST PAS BON</h2>
+        <p>La page rechercher n'est pas disponible</p>
+    </main>

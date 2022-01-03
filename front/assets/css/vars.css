@@ -1,0 +1,29 @@
+:root {
+  --bgGlobal: #22272A;
+  --hover-1: rgba(255,255,255,.05);
+  --primeText: #ffffff;
+  --secondText: #8D8D8D;
+  --bgText: ;
+  --primary: ;
+  --secondary: ;
+  --basisPurple: rgb(139, 52, 139);
+  --lightPurple: rgb(255, 146, 255);
+  --hover-2: rgba(139, 52, 139, .5);
+  --online: #00D100;
+  --offline: #FF4D4D;
+  --win: var(--online);
+  --equals: orange;
+  --lost: var(--offline);
+  --shadows: #1f2224;
+  --boxShadows: 5px 5px 10px #1f2224;
+  --lightShadows: 0 0 10px 0 var(--lightPurple);
+  --warning: var(--equals);
+  --info: rgb(255, 255, 190);
+  --borderInfo: rgb(83, 83, 0);
+  --success: rgb(190, 255, 190);
+  --borderSuccess: rgb(0, 83, 0);
+  --error: rgb(255, 190, 190);
+  --borderError: rgb(83, 0, 0);
+  --template-columns: 250px 1fr 250px;
+  --template-rows: 120px 1fr 30px;
+}

@@ -1,0 +1,33 @@
+<%- include('../partials/header.ejs'); %>
+<div class="module">
+
+  <h2 class="module_title"><%= (login) ? "Connection" : "Inscription" %></h2>
+  <form action="/<%= (login) ? "Login" : "Register" %>" method="POST">
+    <div>
+      <label for="pseudo">Pseudo</label>
+      <input type="text" id="pseudo" name="pseudo" required />
+    </div>
+    <% if (login == false){ %>
+      <div>
+        <label for="firstname">prénom</label>
+        <input type="text" id="firstname" name="firstname" required />
+      </div>
+      <div>
+        <label for="lastname">nom</label>
+        <input type="text" id="lastname" name="lastname" required />
+      </div>
+      <div>
+        <label for="email">email</label>
+        <input type="text" id="email" name="email" required />
+      </div>
+      <% } %>
+      <div>
+        <label for="pwd">password</label>
+        <input type="password" id="pwd" name="pwd" required />
+      </div>
+      <button type="submit" class="button"><%= (login) ? "Se connecter" : "Envoyer" %></button>
+    </form>
+    <p><a href="<%= (!login) ? "/login" : "/register" %>"><%= (!login) ? "Login" : "S'inscrire" %></a></p>
+
+  </div>
+    <%- include('../partials/footer.ejs'); %>
