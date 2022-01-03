@@ -13,8 +13,9 @@ User.init({
       defaultValue: DataTypes.UUIDV4,
       allowNull: false,
       primaryKey: true,
+      unique: true
     },
-    pseudo: { type: DataTypes.STRING, allowNull: false },
+    pseudo: { type: DataTypes.STRING, allowNull: false, unique: true },
     firstname: { type: DataTypes.STRING, allowNull: true },
     lastname: { type: DataTypes.STRING, allowNull: true },
     email: { type: DataTypes.STRING, allowNull: false },

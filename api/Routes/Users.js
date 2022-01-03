@@ -4,19 +4,22 @@ import User from '../models/Users.mdl.js'
 const users = express.Router();
 
 // Get all users
-users.get('/', isAuth, async (req, res) => {
-  //TODO
+users.get('/', async (req, res) => {
+  const users = await User.findAll()
+  res.json(users)
 })
 
 // Add a user
-users.post('/', (req,res) => {
-  User.create(req.body).then(() => {
-    message = "user added to DB"
-    res.status(200).json(message)
-  }).catch(err => {
-    message = `${err} - Error during registering new user call an admin`
-    res.status(500).json(message)
-  })
+users.post('/', async (req,res) => {
+  const isNewPseudo = await (await User.findOne({where: {pseudo: req.body.pseudo}}));
+  const isNewMail = await (await User.findOne({where: {email: req.body.email}}));
+
+  if(isNewPseudo != null || isNewMail != null) {
+    res.status(403).json({error: true, message: 'User already exists'})
+  } else {
+    User.create(req.body)
+    res.status(200).json({message: "user added to DB"})
+  }
 })
 
 // Get profil

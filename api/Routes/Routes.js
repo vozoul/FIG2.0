@@ -6,8 +6,7 @@ import * as models from '../models/models.js'
 const Routes = express.Router();
 
 Routes.get('/', (req, res) => {
-  
-  res.json({
+    res.json({
     "message":"Welcome to my API"
   })
 })
