@@ -34,6 +34,6 @@
       </div>
     </div>
     <div class="sidebar">
-        <%- include('./nav.ejs') %>
+        <%- (typeof c404 !== 'undefined' && c404) ? '' : include('./nav.ejs') %>
     </div>
     <div class="main_content">

@@ -1,16 +1,17 @@
 import express from 'express'
 import bodyParser from 'body-parser'
 import bcrypt from 'bcrypt'
+import { homepage } from './modules/index.js';
 const app = express();
 
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: false }))
 app.use(express.static('assets'))
 
-app.get('/', async (req,res) => {
-  res.render('pages/home', {title: "Accueil"})
-})
+//TODO replace all routes by a call on modules Router
+// then remove useless imports
 
+app.get('/', homepage)
 app.get('/login', (req,res) => {
   res.render('pages/login', {
     title: 'Login',
@@ -26,7 +27,6 @@ app.get('/register', (req,res) => {
 })
 
 app.post('/login', (req,res) => {
-  // TODO try/catch
   console.log(req.body)
 })
 
@@ -40,6 +40,14 @@ app.post('/register', async (req,res) => {
     console.log(err)
     res.redirect('/register')
   }
+})
+
+app.use('*', (req,res) => {
+  res.render('pages/404', {
+    title: "Error occured",
+    c404: true,
+    message: "Une erreur est surevenue, veuillez réessayer ultérierement"
+  })
 })
 
 app.listen(8080)

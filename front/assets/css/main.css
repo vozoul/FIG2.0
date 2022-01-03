@@ -145,7 +145,7 @@ ul, ol {
 }
 
 .main_content {
-  grid-column: 2 / span 2;
+  grid-column: 2;
   display: grid;
   align-items: center;
   justify-items: center;
