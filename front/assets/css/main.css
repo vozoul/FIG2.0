@@ -25,6 +25,16 @@ ul, ol {
   list-style-type: none;
 }
 
+.hide {
+  opacity: 0;
+  transition: opacity 0.1s linear;
+}
+
+.show {
+  opacity: 1;
+  transition: opacity 0.1s linear;
+}
+
 /* Global document */
 .document {
   background: var(--bgGlobal);

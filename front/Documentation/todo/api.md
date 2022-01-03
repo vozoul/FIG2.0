@@ -1,0 +1,21 @@
+[Back](../README.md)
+
+- [ ] Utilisateurs
+  - [ ] commun
+    - [ ] je veux voir les membres (informations limités pour les invités (affiche que les pseudos))
+    - [ ] je veux contacter un admin
+  - [ ] membres
+    - [ ] je veux m'inscrire
+    - [ ] je veux lire mes informations
+    - [ ] je veux modifier mes informations
+    - [ ] je veux supprimer mon compte
+    - [ ] je veux voir les autres membres
+      - [ ] je veux accéder au steamId d'un autre membre pour l'invité
+  - [ ] staff
+    - [ ] je veux valider un utilisateur
+    - [ ] je veux invalider un utilsateur (kicks/bans)
+- [ ] Serveurs
+  - [ ] je veux voir les serveurs
+  - [ ] enregistrer un nouveau server
+- [ ] evènements
+  - [ ] je veux voir les dernières rencontres

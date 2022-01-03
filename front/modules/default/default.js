@@ -1,17 +1,24 @@
-const homepage = (req,res) => {
-    // matches = res.payload.matches
-    res.render('pages/home', {title: "Accueil"})
-  };
+import express from 'express'
+import {home, login, logout, register} from './default.mdl.js'
 
-const login = (req,res) => {}
+const Basic = express.Router()
 
-const register = async (req,res) => {}
+Basic.get('/', home)
+Basic.use('/login', login)
+Basic.use('/register', register)
 
-const logout = async (req,res) => {}
+// export const home = (req,res) => {
+//   // TODO get matches
+//   res.render('pages/home', {
+//     title: "Accueil"
+//     //TODO add matches
+//   })
+// };
 
-export {
-  homepage,
-  login,
-  logout,
-  register
-}
+// export const login = (req,res) => {}
+
+// export const register = async (req,res) => {}
+
+// export const logout = async (req,res) => {}
+
+export default Basic

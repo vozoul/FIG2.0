@@ -1,5 +1,4 @@
-<div class="scoreBoard">
-
+<div class="scoreBoard" id="scoreBoard">
   <div class="scoreboard__header">
     <h3>RENCONTRES</h3>
   </div>
@@ -8,30 +7,29 @@
       <!-- <li class="match none">Pas de matches à afficher</li> -->
       <li>
         <a href="/events/#" class="match">
-          <div class="competitor win">
+          <div class="competitor equal">
             <div class="team">FIG</div>
-            <div class="score">12</div>
+            <div class="score">10</div>
           </div>
           <div class="versus">
             <p>
               <img
-              class="scoreGamePic"
-              src="/img/svg/dod.svg"
-              alt="game icone"
+                class="scoreGamePic"
+                src="/img/svg/dod.svg"
+                alt="game icone"
               />
             </p>
             <p>vs</p>
           </div>
-          <div class="competitor ${match.team2.status}">
+          <div class="competitor equal">
             <div class="score">10</div>
             <div class="team">MDR</div>
           </div>
         </a>
-    </li>
-  </ul>
-</div>
-<div class="scoreboard__footer">
-  <a href="/events" class="showEvents">+</a>
-</div>
-
+      </li>
+    </ul>
+  </div>
+  <div class="scoreboard__footer">
+    <a href="/events" class="showEvents">+</a>
+  </div>
 </div>

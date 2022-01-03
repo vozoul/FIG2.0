@@ -1,0 +1,87 @@
+[Back](../README.md)
+
+- [ ] **Eléments communs**
+  - [ ] je veux une en-tête
+    - [ ] je veux afficher le logo
+    - [ ] je veux afficher le nom de la team
+    - [ ] je veux afficher le titre de section ('Accueil')
+    - [ ] je veux un accès rapide
+      - [ ] je veux le récap des dernières rencontres (finales des gros events / mixs) (fps)
+        - [ ] je veux connaitre je jeu
+        - [ ] je veux savoir le score
+        - [ ] je veux le nom des équipes
+      - [ ] je veux un accès au discord des Fig&reg;
+      - [ ] je veux un accès au steam de la team
+    - [ ] **compléments à définir ...**
+  - **Data**
+    - [ ] je veux récupérer les données depûis l'api
+    - [ ] je veux répartir les données au bon endroits
+    - [ ] **compléments à définir ...**
+  - [ ] je veux que l'en-tête soit responsive
+  - [ ] je veux un menu de navigation à gauche
+    - [ ] le menu doit être rétractable
+  - [ ] je veux un pieds de page
+    - [ ] je veux afficher le &copy; 2021, Created by Fig&reg; team staff...
+    - [ ] je veux un accès à la charte de comportement, aux mentions légales
+  - [ ] **compléments à définir ...**
+- [ ] **Page index**
+  - [ ] je veux une section historique
+  - [ ] je veux une section prochain évenement
+  - [ ] **compléments à définir ...**
+- [ ] **page membres**
+  - [ ] je veux la liste des membres de la team
+  - [ ] je veux que les admins et modos soient en évidence
+  - [ ] je veux pouvoir proposer ma candidature
+    - [ ] je veux un formulaire de candidature
+  - [ ] **compléments à définir ...**
+- [ ] **page serveurs**
+  - [ ] je veux la liste de serveurs
+    - [ ] les informations au premier plan
+      - [ ] je veux un pictogramme significatif du jeu
+      - [ ] je veux savoir si il est en ligne
+      - [ ] je veux le nom du serveur
+      - [ ] je veux son adresse
+        - [ ] je veux pouvoir me connecter directement (si possible)
+      - [ ] je veux la map / le mode de jeu
+      - [ ] je veux la version
+      - [ ] je veux connaitre la place disponibles
+      - [ ] je veux savoir combien de joueurs sont sur le serveur
+    - [ ] je veux des onglets d'infos complémentaires
+      - [ ] je veux la liste des joueurs
+      - [ ] je veux le score des joueurs (fps)
+      - [ ] je peut avoir d'autre information suivant le type de serveur
+        - [ ] minecraft
+          - [ ] la dynamap
+        - [ ] dods
+          - [ ] source ban
+          - [ ] gametracker
+  - [ ] **compléments à définir ...**
+- [ ] **evenement**
+  - [ ] je veux voir la liste des prochains events
+    - [ ] sur quel jeu
+    - [ ] la date de début
+    - [ ] la date de fin
+    - [ ] l'heure de début
+    - [ ] l'heure de fin
+    - [ ] la/les map.s (fonction du jeu)
+    - [ ] une desciption de l'évenement
+  - [ ] je veux pouvoir m'inscrire à un évenement
+    - [ ] j'informe mon pseudo
+    - [ ] j'informe le nom de ma team
+    - [ ] le status de mon inscription (Certain/Remplacement/incertain)
+      - [ ] si je suis remplacent
+        - [ ] j'indique comment me joindre (tel/mail/discord/ts/steam) (1 ou plusieurs choix possibles)
+        - [ ] je suis informer que ces données ne seront utilisées que dans le cadre de l'évènement
+        - [ ] je suis informer qu'uniquement le staff et/ou les organisateurs pourront me joindre
+        - [ ] je suis informer que ces infos seront supprimées 1 heure avant l'évenement
+  - [ ] je veux proposer un évènement
+  - [ ] **compléments à définir ...**
+- [ ] **tutos (toolbox)**
+  - [ ] je veux voir une liste de tutos
+      - [ ] je veux accéder au tuto
+    - [ ] je veux filtrer par jeu / application
+      - [ ] je veux filtrer par catégorie
+        - [ ] je veux accéder au tuto
+  - [ ] **compléments à définir ...**
+- [ ] **contact**
+  - [ ] je veux un formulaire pour contacter le staff des Fig&reg;
