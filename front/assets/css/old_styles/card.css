@@ -14,6 +14,7 @@
   top: -15px;
   left: calc((320px / 2) - 40px);
 }
+
 .card .picto img {
   height: 80px;
   width: 80px;
@@ -67,6 +68,7 @@
 .server_infos {
   margin: 0 20px;
 }
+
 .server_infos form p {
   line-height: 30px;
   background-color: #1f2224;
@@ -74,9 +76,11 @@
   border-radius: 10px;
   padding: 0 10px;
 }
+
 .connect {
   float: right;
 }
+
 .connect a img{
   margin: 5px 0;
   width: 20px;
@@ -88,14 +92,17 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .slots{
   display: flex;
 }
+
 .slots > *:last-child {
   background-color: #8B348B;
   color: #ffffff;
   border-radius: 0 10px 10px 0;
 }
+
 .slots > *:first-child {
   color: #ffffff;
   border-radius: 10px 0 0 10px;
@@ -116,6 +123,7 @@
   display: flex;
   flex-direction: row-reverse;
 }
+
 .tab{
   background-color: #292f33;
 
@@ -124,16 +132,20 @@
   border-radius: 0 0 15px 15px;
   box-shadow: 5px 5px 10px #1f2224;
 }
+
 .tab:hover {
   height: 70px;
 }
+
 .tab:hover > a img {
   top: 30px;
 }
+
 .tab a {
   width: 50px;
   height: 50px;
 }
+
 .tab a img {
   position: relative;
   top: 10px;

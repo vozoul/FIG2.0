@@ -111,12 +111,16 @@
 /* end - Score Borad */
 
 /* start - Globals forms */
-input[type=text], input[type=email], input[type=password] {
+input[type=text], input[type=email], input[type=password], textarea {
   width: 100%;
   padding: 10px;
   margin: 8px 0;
   box-sizing: border-box;
   border-radius: 5px;
+}
+
+textarea {
+  min-height: 40vh;
 }
 /* end - Globals forms */
 
@@ -124,6 +128,11 @@ input[type=text], input[type=email], input[type=password] {
 .login_form {
   height: 100%;
   width: 100%;
+}
+
+.login > div {
+  width: 80%;
+  margin: auto auto;
 }
 
 .module {
@@ -148,11 +157,6 @@ input[type=text], input[type=email], input[type=password] {
   border-radius: 10px 10px 0 0;
 }
 
-.login > div {
-  width: 80%;
-  margin: auto auto;
-}
-
 .module .button {
   background: var(--basisPurple);
   color: #ccc;
@@ -170,3 +174,4 @@ input[type=text], input[type=email], input[type=password] {
 .module .button:hover {
   background: var(--hover-2);
 }
+/*  end - Globals forms */

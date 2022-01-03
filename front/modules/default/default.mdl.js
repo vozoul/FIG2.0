@@ -37,3 +37,14 @@ export const register = async (req, res) => {
     res.redirect("/login");
   }
 };
+
+export const contact = async (req, res) => {
+  if (req.method == "GET") {
+    res.render("pages/contact", {
+      title: "Contact"
+    });
+  }
+  if (req.method == "POST") {
+    res.redirect("/");
+  }
+};
