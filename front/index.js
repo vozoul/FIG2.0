@@ -10,7 +10,7 @@ app.use(Routes)
 
 app.use('*', (req,res) => {
   res.render('pages/404', {
-    title: "Error occured",
+    title: "Je ne comprends pas la demande",
     c404: true,
     message: "Une erreur est surevenue, veuillez réessayer ultérierement"
   })

@@ -18,6 +18,7 @@ User.init({
     pseudo: { type: DataTypes.STRING, allowNull: false, unique: true },
     firstname: { type: DataTypes.STRING, allowNull: true },
     lastname: { type: DataTypes.STRING, allowNull: true },
+    roleLevel: { type: DataTypes.INTEGER, allowNull: true },
     email: { type: DataTypes.STRING, allowNull: false },
     pwd: { type: DataTypes.STRING, allowNull: false },
     steamId: { type: DataTypes.STRING, allowNull: true },

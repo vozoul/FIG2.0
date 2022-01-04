@@ -7,7 +7,7 @@
       <p><a href=""></a></p>
     </div>
     <widget class="widget">
-      <%- include('../components/scoreBoard/scoreBoard.ejs', {async: true}) %>
+      <%- (typeof showScore !== 'undefined' && showScore ) ? include('../components/scoreBoard/scoreBoard.ejs', {async: true}) : '' %>
     </widget>
   </div>
 </body>
