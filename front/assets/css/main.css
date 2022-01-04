@@ -80,7 +80,7 @@ ul, ol {
   font-family: "sharkbit";
   font-weight: bold;
   padding: 5px 25px;
-  border-radius: 0 25px 25px 0;
+  border-radius: 0 30px 30px 0;
 }
 
 .brand_name {
@@ -129,18 +129,23 @@ ul, ol {
 
 .option_item {
   background: var(--hover-1);
+  transform: scale(1);
   height: 60px;
   width: 60px;
   padding: 10px;
   margin: 30px 10px;
   border-radius: 50%;
   box-shadow: var(--boxShadows);
+  transition: transform .2s ease, background .2s ease;
 }
 
 .option_item:hover {
+  background: var(--hover-2);
   transform: scale(1.1);
   box-shadow: var(--lightShadows);
+  border: 1px solid #555;
   cursor: pointer;
+  transition: transform .2s ease, background .2s ease;
 }
 
 .option_link {

@@ -17,3 +17,9 @@ sbBtn.onclick = (e) => {
   e.preventDefault();
   toggle('scoreBoard')
 }
+
+const brand = document.getElementById('brand')
+brand.onclick = (e) => {
+  e.preventDefault();
+  this.location = "/"
+}
