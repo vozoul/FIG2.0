@@ -13,10 +13,10 @@ const toggle = (element) => {
 
 const sbBtn = document.getElementById('score-board')
 
-sbBtn.onclick = (e) => {
+sbBtn.on('click', (e) => {
   e.preventDefault();
   toggle('scoreBoard')
-}
+})
 
 const brand = document.getElementById('brand')
 brand.onclick = (e) => {
