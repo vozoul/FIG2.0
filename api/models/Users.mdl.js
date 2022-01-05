@@ -1,5 +1,6 @@
-import { Model, DataTypes } from "sequelize";
+import sequelize from "sequelize";
 import db from "../services/db.js";
+const { Model, DataTypes } = sequelize
 
 class User extends Model {
 
