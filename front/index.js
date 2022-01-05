@@ -12,7 +12,7 @@ app.use('*', (req,res) => {
   res.render('pages/404', {
     title: "Error occured",
     c404: true,
-    message: "Une erreur est surevenue, veuillez réessayer ultérierement"
+    message: "Une erreur est surevenue, veuillez réessayer ultérieurement"
   })
 })
 
