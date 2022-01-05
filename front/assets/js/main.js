@@ -13,7 +13,7 @@ const toggle = (element) => {
 
 const sbBtn = document.getElementById('score-board')
 
-sbBtn.on('click', (e) => {
+sbBtn.onclick = (e) => {
   e.preventDefault();
   toggle('scoreBoard')
 })
