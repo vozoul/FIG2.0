@@ -16,7 +16,7 @@ const sbBtn = document.getElementById('score-board')
 sbBtn.onclick = (e) => {
   e.preventDefault();
   toggle('scoreBoard')
-})
+}
 
 const brand = document.getElementById('brand')
 brand.onclick = (e) => {
