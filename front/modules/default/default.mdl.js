@@ -33,7 +33,7 @@ export const register = async (req, res) => {
     const url = `${apiURL}/users`;
     const params = req.body;
     const body = await encryptPWD(params);
-    const back = await call("post", url, body);
+    const back = await call("post", url, body).catch((err => {console.log(err)}));
     res.redirect("/login");
   }
 };
