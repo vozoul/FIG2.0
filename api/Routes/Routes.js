@@ -1,12 +1,12 @@
 import express from 'express'
 import users from './Users.js'
 
-import * as models from '../models/models.js'
+import basis from '../models/models.js'
 
 const Routes = express.Router();
 
-Routes.get('/', (req, res) => {
-    res.json({
+Routes.get('/',(req, res) => {
+  res.json({
     "message":"Welcome to my API"
   })
 })

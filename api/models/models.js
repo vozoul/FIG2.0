@@ -1,4 +1,4 @@
-import basis from './basis.mdl.js'
+import * as basis from './basis.mdl.js'
 
 export default {
   basis,

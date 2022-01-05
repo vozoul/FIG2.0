@@ -27,11 +27,7 @@
         <p class="separator"><i class="arrow down"></i></p>
       </div>
       <div class="headerOptions">
-        <ul class="option_list">
-          <li class="option_item"><a id="score-board" class="option_link"><img src="/img/svg/cup.svg" alt="Dernières rencontres" /></a></li>
-          <li class="option_item"><a href="https://discord.gg/AnRrwch" target="_blanck" class="option_link"><img src="/img/svg/discord.svg" alt="Notre discord" /></a></li>
-          <li class="option_item"><a href="https://steamcommunity.com/groups/lesfigues" target="_blanck" class="option_link"><img src="/img/svg/steam.svg" alt="Notre groupe Steam" /></a></li>
-        </ul>
+        <%- (typeof c404 !== 'undefined' && c404) ? '' : include('./optionsList.ejs') %>
       </div>
     </div>
     <div class="sidebar">
