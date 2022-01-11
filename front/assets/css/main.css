@@ -25,12 +25,22 @@ ul, ol {
   list-style-type: none;
 }
 
+.middle {
+  position: absolute;
+  height: 100vh;
+  width: 3px;
+  margin: 0 50%;
+  border: solid 1px #fff;
+}
+
 .hide {
+  display: none;
   opacity: 0;
   transition: opacity 0.1s linear;
 }
 
 .show {
+  display: block;
   opacity: 1;
   transition: opacity 0.1s linear;
 }
@@ -114,6 +124,15 @@ ul, ol {
 .down {
   transform: rotate(45deg) translateY(-23px) translateX(-23px);
   -webkit-transform: rotate(45deg) translateY(-23px) translateX(-23px);
+}
+
+.bd-white {
+  border-color: #fff !important;
+}
+
+.inline {
+  transform: rotate(45deg) translateY(-6px) translateX(-6px);
+  -webkit-transform: rotate(45deg) translateY(-6px) translateX(-6px)
 }
 
 .headerOptions {

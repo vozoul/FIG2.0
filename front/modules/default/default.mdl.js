@@ -7,6 +7,7 @@ export const home = async (req, res) => {
     title: "Accueil",
   });
 };
+
 export const login = async (req, res) => {
   if (req.method == "GET") {
     res.render("pages/login", {
@@ -15,13 +16,15 @@ export const login = async (req, res) => {
     });
   }
   if (req.method == "POST") {
-    //TODO try/catch a user from database
+    // TODO try/catch a user from database
     res.redirect("/");
   }
 };
+
 export const logout = async (req, res) => {
   res.redirect("/");
 };
+
 export const register = async (req, res) => {
   if (req.method == "GET") {
     res.render("pages/login", {
@@ -33,7 +36,11 @@ export const register = async (req, res) => {
     const url = `${apiURL}/users`;
     const params = req.body;
     const body = await encryptPWD(params);
-    const back = await call("post", url, body).catch((err => {console.log(err)}));
+    const payload = await call("post", url, body)
+    if(payload.data.error){
+      res.redirect("/register");
+      return
+    }
     res.redirect("/login");
   }
 };

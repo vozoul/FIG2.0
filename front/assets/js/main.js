@@ -1,4 +1,9 @@
-const score = document.getElementById('scoreBoard').classList.add('hide')
+const brand = document.getElementsByClassName('brand') || null
+const brandName = document.getElementsByClassName('brand_name') || null
+const brandLogo = document.getElementsByClassName('brand_logo') || null
+const sbBtn = document.getElementById('score-board') || null
+const score = document.getElementById('scoreBoard') || null
+
 
 const toggle = (element) => {
   const el = document.getElementById(element)
@@ -11,15 +16,41 @@ const toggle = (element) => {
   }
 }
 
-const sbBtn = document.getElementById('score-board')
-
-sbBtn.onclick = (e) => {
-  e.preventDefault();
-  toggle('scoreBoard')
+const back = () => {
+  window.Location = "/"
 }
 
-const brand = document.getElementById('brand')
-brand.onclick = (e) => {
-  e.preventDefault();
-  this.location = "/"
+
+
+score.classList.add('hide')
+
+if (sbBtn !== null){
+  sbBtn.onclick = (e) => {
+    e.preventDefault();
+    toggle('scoreBoard')
+  }
+}
+
+if (brand !== null) {
+  brand.onclick = (e) => {
+    e.preventDefault()
+    console.log('click');
+    back();
+  }
+}
+
+if (brandName !== null) {
+  brandName.onclick = (e) => {
+    e.preventDefault()
+    console.log('click');
+    back();
+  }
+}
+
+if (brandLogo !== null) {
+  brandLogo.onclick = (e) => {
+    e.preventDefault()
+    console.log('click');
+    back();
+  }
 }

@@ -6,6 +6,10 @@
   align-self: center;
 }
 
+.nav_list.little > .nav_item .nav_link span {
+  display: none;
+}
+
 .nav_item {
   margin: 30px auto;
 }
@@ -169,11 +173,15 @@ textarea {
   justify-self: center;
   position: relative;
   width: 70%;
-  margin: 0 auto;
-  padding: 40px;
+  margin: 80px auto;
+  padding: 0;
   background: var(--hover-1);
   border-radius: 0 20px 0 20px;
   box-shadow: var(--boxShadows);
+}
+
+.noBtn {
+  border-radius: 0 20px 20px 20px;
 }
 
 .module_title {
@@ -201,12 +209,32 @@ textarea {
 }
 
 .module .button:hover {
-  background: var(--hover-1);
+  background: var(--hover-2);
+}
+
+.module form {
+  margin: 40px;
+}
+
+.event_card {
+  display: flex;
+}
+
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container h3 {
+  margin: 20px 0;
+  font-size: 1.6rem;
 }
 
 .redirection {
   position: relative;
-  top: 20px;
+  top: -20px;
+  left: 60px;
   font-size: 1.3rem;
   letter-spacing: .4rem;
   font-weight: 900;
