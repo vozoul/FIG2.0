@@ -2,16 +2,16 @@
 
 - [ ] **Eléments communs**
   - [ ] je veux une en-tête
-    - [ ] je veux afficher le logo
-    - [ ] je veux afficher le nom de la team
-    - [ ] je veux afficher le titre de section ('Accueil')
-    - [ ] je veux un accès rapide
-      - [ ] je veux le récap des dernières rencontres (finales des gros events / mixs) (fps)
-        - [ ] je veux connaitre je jeu
-        - [ ] je veux savoir le score
-        - [ ] je veux le nom des équipes
-      - [ ] je veux un accès au discord des Fig&reg;
-      - [ ] je veux un accès au steam de la team
+    - [x] je veux afficher le logo
+    - [x] je veux afficher le nom de la team
+    - [x] je veux afficher le titre de section ('Accueil')
+    - [x] je veux un accès rapide
+      - [x] je veux le récap des dernières rencontres (finales des gros events / mixs) (fps)
+        - [x] je veux connaitre je jeu
+        - [x] je veux savoir le score
+        - [x] je veux le nom des équipes
+      - [x] je veux un accès au discord des Fig&reg;
+      - [x] je veux un accès au steam de la team
     - [ ] **compléments à définir ...**
   - **Data**
     - [ ] je veux récupérer les données depûis l'api
