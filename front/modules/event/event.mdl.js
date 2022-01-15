@@ -4,11 +4,11 @@ import { needles, apiURL} from '../../services/config.js'
 
 
 export const all = async (req,res) => {
-  const uri = apiURL + '/events'
-  const response = await call('GET', uri)
+  // const uri = apiURL + '/events'
+  // const response = await call('GET', uri)
   res.render('pages/events', {
     title: "Évènements",
-    data: response.data
+    // data: response.data
   })
 }
 
