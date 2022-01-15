@@ -50,7 +50,7 @@
 }
 
 .scoreboard__main {
-  background: var(--hover-1);
+  background: var(--modules);
   padding-bottom: 30px;
   border-radius: 0 0 10px 10px;
   box-shadow: var(--boxShadows);
@@ -70,7 +70,7 @@
 }
 
 .match:hover {
-  background-color: var(--bgGlobal);
+  background-color: var(--hover-3);
 }
 
 .match.none {
@@ -176,7 +176,7 @@ textarea {
   width: 70%;
   margin: 80px auto;
   padding: 0;
-  background: var(--hover-1);
+  background: var(--modules);
   border-radius: 0 20px 0 20px;
   box-shadow: var(--boxShadows);
 }
@@ -228,6 +228,7 @@ textarea {
 
 .selector {
   position: relative;
+  align-self: center;
   left: -35px;
   background-color: var(--modules);
   width: 70px;
