@@ -63,7 +63,7 @@
     - [ ] la date de fin
     - [ ] l'heure de début
     - [ ] l'heure de fin
-    - [ ] la/les map.s (fonction du jeu)
+    - [ ] la/les map.s (fonction du jeu) à discuter
     - [ ] une desciption de l'évenement
   - [ ] je veux pouvoir m'inscrire à un évenement
     - [ ] j'informe mon pseudo

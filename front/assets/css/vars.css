@@ -1,6 +1,9 @@
 :root {
   --bgGlobal: #22272A;
+  --modules: #2d3235;
   --hover-1: rgba(255,255,255,.05);
+  --hover-2: rgba(139, 52, 139, .5);
+  --hover-3: rgba(0,0,0,.2);
   --primeText: #ffffff;
   --secondText: #8D8D8D;
   --bgText: ;
@@ -8,7 +11,6 @@
   --secondary: ;
   --basisPurple: rgb(139, 52, 139);
   --lightPurple: rgb(255, 146, 255);
-  --hover-2: rgba(139, 52, 139, .5);
   --online: #00D100;
   --offline: #FF4D4D;
   --win: var(--online);

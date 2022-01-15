@@ -21,3 +21,18 @@
   - [ ] city
   - [ ] zip_code
   - [ ] country
+
+- [ ] evenements
+  - [ ] je veux enregistrer un évenement
+    - [ ] nom
+    - [ ] type
+    - [ ] description
+    - [ ] debut
+    - [ ] fin
+    - [ ] lieu
+    - [ ] image
+  - [ ] je veux proposer une rencontre
+    - [ ] nom de la team
+    - [ ] contact dans la team
+    - [ ] jeux
+    - [ ] dates (tableau de date & heures)

@@ -6,6 +6,9 @@ import Users from './user/index.js'
 
 const Routes = express.Router();
 Routes.use('/', Basic)
+Routes.use('/members', (req, res) => {
+  res.redirect('/users')
+})
 Routes.use('/users', Users)
 Routes.use('*', (req,res) => {
   res.render('pages/404', {

@@ -4,12 +4,12 @@ import { needles, apiURL} from '../../services/config.js'
 
 
 export const allUser = async (req,res) => {
-  const uri = apiURL + '/users'
-  const response = await call('GET', uri)
-  console.log(response)
+  // const uri = apiURL + '/users'
+  // const response = await call('GET', uri)
+  // console.log(response)
   res.render('pages/membres', {
     title: "Membres",
-    data: response.data
+    // data: response.data
   })
 }
 

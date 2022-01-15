@@ -172,6 +172,7 @@ textarea {
   align-self: center;
   justify-self: center;
   position: relative;
+  max-height: calc(80vh - 120px);
   width: 70%;
   margin: 80px auto;
   padding: 0;
@@ -182,6 +183,14 @@ textarea {
 
 .noBtn {
   border-radius: 0 20px 20px 20px;
+}
+
+.noTitle {
+  border-radius: 20px 20px 0 20px;
+}
+
+.noBtn.noTitle {
+  border-radius: 20px 20px 20px 20px;
 }
 
 .module_title {
@@ -204,6 +213,7 @@ textarea {
   position: absolute;
   bottom: -40px;
   right:0;
+  font-weight: bold;
   border-radius: 0 0 10px 10px;
   box-shadow: var(--boxShadows);
 }
@@ -214,6 +224,43 @@ textarea {
 
 .module form {
   margin: 40px;
+}
+
+.selector {
+  position: relative;
+  left: -35px;
+  background-color: var(--modules);
+  width: 70px;
+  border-radius: 20px;
+  box-shadow: var(--boxShadows);
+}
+
+.selector_list {
+  padding: 20px 0;
+}
+
+.selector_item {
+  height: 70px;
+  width: 70px;
+  font-size: .8em;
+  font-weight: bold;
+}
+
+.selector_item a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.selector_item a:hover {
+  background-color: var(--hover-3);
+}
+
+.selector_item a img {
+  widows: 30px;
+  height: 30px;
+  margin: 5px auto;
 }
 
 .event_card {
