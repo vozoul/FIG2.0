@@ -298,3 +298,148 @@ textarea {
   color: var(--basisPurple);
 }
 /*  end - Globals forms */
+
+.card {
+  position: relative;
+  min-width: 320px;
+  margin: 0 40px;
+	flex-shrink: 0;
+}
+
+/* Server logo image */
+.card .picto {
+  position: absolute;
+  top: -15px;
+  left: calc((320px / 2) - 40px);
+}
+.card .picto img {
+  height: 80px;
+  width: 80px;
+}
+
+
+/* Servers status */
+.status {
+  position: relative;
+  top: 45px;
+  left: 15px;
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+}
+.status.online {
+  background-color: lime;
+}
+.status.offline {
+  background-color: #FF4D4D;
+}
+
+/* card content */
+.sub {
+  background: var(--modules);
+  /* background-color: var(--tileBackground); */
+  height: 450px;
+  border-radius: 30px 30px 0 30px;
+  box-shadow: var(--boxShadows);
+
+  padding-top: 80px;
+}
+.sub .hide {
+  display: none;
+}
+.sub .show {
+  display: block;
+}
+
+/* common card content style */
+.server_name, .server_infos form label, .server_infos form p {
+  color: #ffffff;
+  margin: 10px 0;
+}
+.server_name {
+  text-align: center;
+}
+.server_name, .server_infos form label{
+  font-weight: bolder;
+}
+
+/* server_infos */
+.server_infos {
+  margin: 0 20px;
+}
+.server_infos form p {
+  line-height: 30px;
+  background-color: #1f2224;
+  border: 1px #292f33 solid;
+  border-radius: 10px;
+  padding: 0 10px;
+}
+.connect {
+  float: right;
+}
+.connect a img{
+  margin: 5px 0;
+  width: 20px;
+  height: 20px;
+}
+.server_slots {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.slots{
+  display: flex;
+}
+.slots > *:last-child {
+  background-color: #8B348B;
+  color: #ffffff;
+  border-radius: 0 10px 10px 0;
+}
+.slots > *:first-child {
+  color: #ffffff;
+  border-radius: 10px 0 0 10px;
+}
+
+/* warning disclaimer */
+.warning {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  /* margin-top: 50px; */
+  color: orangered;
+  font-weight: bolder;
+}
+
+/* card bottom navigation */
+.card_nav ul {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  height: 90px;
+}
+.tab{
+  background-color: #292f33;
+
+  width: 50px;
+  height: 50px;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 5px 5px 10px #1f2224;
+}
+.tab:hover {
+  height: 70px;
+}
+.tab:hover > a img {
+  top: 30px;
+}
+.tab a {
+  width: 50px;
+  height: 50px;
+}
+.tab a img {
+  position: relative;
+  top: 10px;
+  left: calc(50% - 15px);
+  height: 30px;
+  width: 30px;
+}

@@ -1,0 +1,9 @@
+<%- include('../partials/header.ejs'); %>
+
+<div style="display: flex; flex-direction: row;">
+    <% servers.forEach((server) => { %>
+        <%- include('../components/server/card', {server: server}) %>
+    <% }) %>
+</div>
+
+<%- include('../partials/footer.ejs'); %>

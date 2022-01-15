@@ -1,0 +1,58 @@
+<div class="card">
+    <div class="picto">
+        <img src="<%= server.serverPicto %>" alt=""/>
+    </div>
+    <div class="status <%= server.serverStatus %>">&nbsp;</div>
+    <div class="sub">
+        <div class="server_infos show">
+            <p class="server_name"><%= server.serverTitle %></p>
+            <div class='separator'>&nbsp;</div>
+            <form>
+                <label>IP address</label>
+                <p><%= server.serverIP %>:<%= server.serverPort %>
+                    <% if(server.serverConnect){ %>
+                        <span class="connect"><a href="<%= server.serverConnect %>"><img src="/img/svg/rightArrow.svg"><a></a></span>
+                    <% } %>
+                </p>
+                <label><%= server.serverMap ? "Map" : "Mode" %></label>
+                <p><%= server.serverMap ? server.serverMap : server.serverMode ? server.serverMode : "N/A" %></p>
+                <div class="server_slots">
+                    <label>Version</label>
+                    <div class="slots">
+                        <p><%= server.serverVersion ?? "N/A" %></p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="server_slots">
+                    <label>Online players</label>
+                    <div class="slots">
+                        <% if(server.serverStatus == 'online'){ %>
+                            <p><%= server.playersOnline.length %></p>
+                        <% }else{ %>
+                            <p>0</p>
+                        <% } %>
+                        <p><%= server.serverSlots %></p>
+                    </div>
+                </div>
+            </form>
+            <% if(server.serverStatus == 'offline'){ %>
+            <p class="warning">/!\ Server is down /!\</p>
+            <% } %>
+        </div>
+        <div class="server_players hide">
+            <p class="server_name">Joueurs en ligne</p>
+        </div>
+        <div class="server_options hide">nouvelle partie de la card</div>
+    </div>
+    <div class="card_nav">
+        <ul>
+            <li class="tab in_use"><a href="#" data-nav="server"><img src="<%= server.serverPicto %>" alt="Serveur"></a></li>
+            <% server.serverOptions ? server.serverOptions.forEach(function(option){ %>
+                <li class="tab"><a href="#" data-nav="options"><img src="<%= option.pic %>" alt="<%= option.alt %>"></a></li>
+            <% }) : null %>
+            <% if(server.serverStatus == 'online'){ %>
+            <li class="tab"><a href="#" data-nav="online_players"><img src="/img/svg/membres.svg" alt="Online players"></a></li>
+            <% } %>
+        </ul>
+    </div>
+</div>
