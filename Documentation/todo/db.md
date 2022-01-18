@@ -35,4 +35,5 @@
     - [ ] nom de la team
     - [ ] contact dans la team
     - [ ] jeux
+    - [ ] description
     - [ ] dates (tableau de date & heures)

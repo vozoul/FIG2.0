@@ -12,21 +12,13 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING
       },
-      leader: {
+      leaders: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.JSON
       },
       servers: {
         allowNull: true,
         type: Sequelize.JSON
-      },
-      discord: {
-        allowNull: true,
-        type: Sequelize.STRING
-      },
-      teamspeack: {
-        allowNull: true,
-        type: Sequelize.STRING
       },
       groups: {
         allowNull: true,

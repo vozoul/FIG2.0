@@ -8,9 +8,46 @@
     - [ ] first_name
     - [ ] lastname
     - [ ] steamId
+    - [ ] role
   - [ ] events
+    - [ ] id
+    - [ ] name
+    - [ ] created_by
+    - [ ] type
+    - [ ] description
+    - [ ] start_date
+    - [ ] end_date
+    - [ ] place
+    - [ ] is_irl
+    - [ ] is_valid
+    - [ ] challengers
+    - [ ] created_at
+    - [ ] updated_at
   - [ ] teams
+    - [ ] id
+    - [ ] name
+    - [ ] leaders
+    - [ ] servers
+    - [ ] groups
+    - [ ] created_at
+    - [ ] updated_at
   - [ ] servers
+    - [ ] id
+    - [ ] name
+    - [ ] description
+    - [ ] ip_server
+    - [ ] port_server
+    - [ ] max_slots
+    - [ ] options
+    - [ ] created_at
+    - [ ] updated_at
+  - [ ] roles
+    - [ ] id
+    - [ ] level
+    - [ ] name
+    - [ ] created_at
+    - [ ] updated_at
 
 - [ ] ajouter les relations
-  - [ ]
+  - [ ] users
+    - [ ] role <=> level
