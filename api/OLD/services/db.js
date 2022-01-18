@@ -18,4 +18,4 @@ const db = new Sequelize(database, dbuser, dbpass, {
   storage: `./${dbhost}`
 })
 
-export default db
+module.exports = db

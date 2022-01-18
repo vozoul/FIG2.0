@@ -11,7 +11,7 @@ users.get('/', async (req, res) => {
 })
 
 // Add a user
-users.post('/', async (req,res) => {
+users.post('/add', async (req,res) => {
   const isNewPseudo = await User.findOne({where: {pseudo: req.body.pseudo}});
   const isNewMail = await User.findOne({where: {email: req.body.email}});
 

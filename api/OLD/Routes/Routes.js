@@ -1,11 +1,11 @@
-import express from 'express'
-import users from './Users.js'
+// import express from 'express'
+// import users from './Users.js'
 // import roles from './Role.js'
 // import events from './Events.js'
 
 // import basis from '../models/models.js'
 
-const Routes = express.Router();
+module.exports = Routes = require('express').Router();
 
 // api root
 Routes.get('/',(req, res) => {
@@ -15,7 +15,7 @@ Routes.get('/',(req, res) => {
   })
 })
 
-Routes.use('/users', users)
+// Routes.use('/users', users)
 // Routes.use('/events', events)
 
 // api call error
@@ -27,4 +27,4 @@ Routes.use('*', (req,res) => {
   })
 })
 
-export default Routes
+// export default Routes

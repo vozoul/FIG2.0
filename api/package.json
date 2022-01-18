@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "type": "module",
   "scripts": {
-    "start": "node server.js"
+    "start": "NODE_ENV=production node server.js",
+    "test": "NODE_ENV=test node server.js",
+    "dev": "NODE_ENV=development nodemon server.js"
   },
   "keywords": [],
   "author": "",

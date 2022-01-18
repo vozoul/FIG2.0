@@ -8,7 +8,7 @@ export const getToken = () => {
 }
 
 const refreshToken = () => {
-
+  return "sùldfkgmldfkglkfdjwglmkdwgkmljgkmljdqmljgfkmlwjglkdfwj";
 }
 
 export const encryptPWD = async (inner) => {

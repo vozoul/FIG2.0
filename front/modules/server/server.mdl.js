@@ -54,11 +54,10 @@ export const showAll = async (req, res) => {
     serverSlots: "15",
     playersOnline: ["Gobniou","DingoMorbid","KmradSilver","KMARTY","Loading...","M pti Bool","K@ng00rose","Jaye","Noémie","unL@pinR0se"]
   }];
+  // const payload = call('GET', apiURL + "/servers/")
   res.render('pages/servers', {title: "SERVERS", servers: payload})
 }
 
 export const addOne = (req,res) => {}
-export const profil = (req,res) => {}
-export const getOne = (req,res) => {}
 export const modify = (req,res) => {}
 export const remove = (req,res) => {}
