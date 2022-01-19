@@ -5,7 +5,7 @@
 
 // import basis from '../models/models.js'
 
-module.exports = Routes = require('express').Router();
+Routes = require('express').Router();
 
 // api root
 Routes.get('/',(req, res) => {
@@ -28,3 +28,4 @@ Routes.use('*', (req,res) => {
 })
 
 // export default Routes
+module.exports = Routes
