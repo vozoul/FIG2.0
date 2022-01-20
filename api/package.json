@@ -6,7 +6,7 @@
   "scripts": {
     "start": "set NODE_ENV=production && node server.js",
     "test": "set NODE_ENV=test node && server.js",
-    "dev": "NODE_ENV=development nodemon server.js"
+    "dev": "set NODE_ENV=development && nodemon server.js"
   },
   "keywords": [],
   "author": "",

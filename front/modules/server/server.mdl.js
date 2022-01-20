@@ -2,18 +2,6 @@ import bodyParser from 'body-parser'
 import { call } from '../../services/global.js'
 import { needles, apiURL} from '../../services/config.js'
 
-
-// export const showAll = async (req,res) => {
-//   // const uri = apiURL + '/users'
-//   // const response = await call('GET', uri)
-//   // console.log(response)
-//   res.render('pages/servers', {
-//     title: "Serveurs",
-//     // data: response.data
-//   })
-// }
-
-
 export const showAll = async (req, res) => {
   const payload = [{
     serverPicto: "/img/svg/dod.svg",

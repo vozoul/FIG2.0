@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
   Team.init({
     name: DataTypes.STRING,
     leader: DataTypes.STRING,
-    servers: DataTypes.ARRAY,
+    servers: DataTypes.JSON,
     discord: DataTypes.STRING,
     teamspeck: DataTypes.STRING
   }, {

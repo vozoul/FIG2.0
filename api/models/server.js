@@ -15,11 +15,13 @@ module.exports = (sequelize, DataTypes) => {
   };
   Server.init({
     name: DataTypes.STRING,
+    game: DataTypes.STRING,
     description: DataTypes.STRING,
     ip_server: DataTypes.STRING,
     port_server: DataTypes.INTEGER,
     max_slots: DataTypes.INTEGER,
-    options: DataTypes.ARRAY
+    attachment: DataTypes.BLOB,
+    options: DataTypes.JSON
   }, {
     sequelize,
     modelName: 'Server',

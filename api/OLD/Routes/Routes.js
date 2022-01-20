@@ -1,24 +1,17 @@
-// import express from 'express'
-// import users from './Users.js'
-// import roles from './Role.js'
-// import events from './Events.js'
-
-// import basis from '../models/models.js'
-
-Routes = require('express').Router();
+const Routes = require('express').Router();
+const Users = require('./Users.js')
 
 // api root
 Routes.get('/',(req, res) => {
   res.status(200)
   res.json({
-    "message":"Welcome to my API"
+    "message":"Welcome to FIG API"
   })
 })
 
-// Routes.use('/users', users)
+Routes.use('/users', Users)
 // Routes.use('/events', events)
 
-// api call error
 Routes.use('*', (req,res) => {
   res.status(500)
   res.json({
@@ -27,5 +20,4 @@ Routes.use('*', (req,res) => {
   })
 })
 
-// export default Routes
 module.exports = Routes

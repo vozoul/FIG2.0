@@ -1,16 +1,12 @@
-import express from 'express'
-import {isAuth} from '../services/auth.js'
-import User from '../models/Users.mdl.js'
-const users = express.Router();
+const users = require('express').Router();
+let User = require('../../models').User;
 
-// Get all users
-users.get('/', async (req, res) => {
+users.get('/all', async (req, res) => {
   const users = await User.findAll()
   console.log(users)
   res.json(users)
 })
 
-// Add a user
 users.post('/add', async (req,res) => {
   const isNewPseudo = await User.findOne({where: {pseudo: req.body.pseudo}});
   const isNewMail = await User.findOne({where: {email: req.body.email}});
@@ -23,19 +19,26 @@ users.post('/add', async (req,res) => {
   }
 })
 
-// Get profil
-users.get('/:id', (req,res) => {
+users.get('/show/:id', async (req,res) => {
+  const user = await User.findOne({where: {id: req.params.id}})
+  res.json(user)
+})
+
+users.put('/update/:id', async (req,res) => {
+  // TODO check if any parts not in use by other user
+  // checkDubble(req, res, id)  // request , response, except
+
+  await User.update(req.body, {where: {id: req.params.id}})
+    .then(e => {
+      res.status(200).json({success: true, message: "User updated with success"})
+    })
+    .catch(err => {
+        res.status(500).json({error: true, err, message: "Error occured ..."})
+    })
+})
+
+users.delete('/delete/:id', (req,res) => {
   //TODO
 })
 
-// Modify profil
-users.put('/:id', (req,res) => {
-  //TODO
-})
-
-// Delete profil
-users.delete('/:id', (req,res) => {
-  //TODO
-})
-
-export default users
+module.exports = users

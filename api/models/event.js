@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
     end_date: DataTypes.DATE,
     place: DataTypes.STRING,
     is_irl: DataTypes.BOOLEAN,
-    challengers: DataTypes.ARRAY
+    challengers: DataTypes.JSON
   }, {
     sequelize,
     modelName: 'Event',

@@ -1,3 +1,5 @@
+const uuid = require('uuid').v4;
+
 'use strict';
 const {
   Model
@@ -15,16 +17,20 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   User.init({
-    pseudo: DataTypes.STRING,
+    pseudo: DataTypes.UUID,
     firstname: DataTypes.STRING,
     lastname: DataTypes.STRING,
     email: DataTypes.STRING,
     pwd: DataTypes.STRING,
     bio: DataTypes.STRING,
-    avatar: DataTypes.BLOB
+    avatar: DataTypes.BLOB,
+    role: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'User',
+  });
+  User.beforeCreate((user, _ ) => {
+    return user.id = uuid();
   });
   return User;
 };

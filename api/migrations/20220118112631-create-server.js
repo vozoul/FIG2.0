@@ -12,6 +12,10 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING
       },
+      game: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
       description: {
         allowNull: true,
         type: Sequelize.STRING
@@ -27,6 +31,10 @@ module.exports = {
       max_slots: {
         allowNull: true,
         type: Sequelize.INTEGER
+      },
+      attachment: {
+        allowNull: true,
+        type: Sequelize.BLOB
       },
       options: {
         allowNull: true,
