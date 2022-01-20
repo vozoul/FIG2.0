@@ -1,10 +1,11 @@
 const users = require('express').Router();
-let User = require('../../models').User;
+const User = require('../../models').User;
+const Role = require('../../models').Role;
 
 users.get('/all', async (req, res) => {
-  const users = await User.findAll()
-  console.log(users)
-  res.json(users)
+  const users = await User.findAll({attributes: ["id", "pseudo", "avatar", "role"]})
+  const roles = await Role.findAll({attributes: ["level", "name"]})
+  res.json({users, roles})
 })
 
 users.post('/add', async (req,res) => {
@@ -13,10 +14,11 @@ users.post('/add', async (req,res) => {
 
   if(isNewPseudo != null || isNewMail != null) {
     res.json({error: true, message: 'User already exists'})
-  } else {
-    const member = await User.create(req.body)
-    res.json(member)
+    return false;
   }
+
+  const member = await User.create(req.body)
+  res.json(member)
 })
 
 users.get('/show/:id', async (req,res) => {
@@ -33,11 +35,11 @@ users.put('/update/:id', async (req,res) => {
       res.status(200).json({success: true, message: "User updated with success"})
     })
     .catch(err => {
-        res.status(500).json({error: true, err, message: "Error occured ..."})
+      res.status(500).json({error: true, err, message: "Error occured ..."})
     })
 })
 
-users.delete('/delete/:id', (req,res) => {
+users.delete('/delete/:id', async (req,res) => {
   //TODO
 })
 
