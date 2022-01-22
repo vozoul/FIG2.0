@@ -33,10 +33,12 @@ export const register = async (req, res) => {
     });
   }
   if (req.method == "POST" || req.method == "post") {
-    const url = `${apiURL}/users`;
+    const url = `${apiURL}/users/add`;
+
+    req.body.pwd = await encryptPWD(req.body.pwd)
+
     const params = req.body;
-    const body = await encryptPWD(params);
-    const payload = await call("post", url, body)
+    const payload = await call("post", url, params)
     if(payload.data.error){
       res.redirect("/register");
       return

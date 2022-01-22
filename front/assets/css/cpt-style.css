@@ -226,9 +226,15 @@ textarea {
   margin: 40px;
 }
 
-.selector {
+.users {
   position: relative;
+  left: 50px;
+}
+
+.selector {
+  position: absolute;
   align-self: center;
+  top: 20px;
   left: -35px;
   background-color: var(--modules);
   width: 70px;

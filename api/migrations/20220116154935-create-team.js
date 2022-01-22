@@ -12,6 +12,10 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING
       },
+      logo: {
+        allowNull: true,
+        type: Sequelize.BLOB
+      },
       leaders: {
         allowNull: false,
         type: Sequelize.JSON

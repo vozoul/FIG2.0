@@ -1,11 +1,17 @@
 const users = require('express').Router();
+const { Op } = require('sequelize');
 const User = require('../../models').User;
 const Role = require('../../models').Role;
+const cfg = require('../../config/team.json')
 
 users.get('/all', async (req, res) => {
-  const users = await User.findAll({attributes: ["id", "pseudo", "avatar", "role"]})
+  lowestMember = cfg.minMember
+  const min = await Role.findOne({where: {name: lowestMember}})
+  const users = await User.findAll({attributes: ["id", "pseudo", "avatar", "role"] ,where: {role: {[Op.gt]: -1}}})
+  // const users = await User.findAll({attributes: ["id", "pseudo", "avatar", "role"] ,where: {role: {[Op.gt]: 300}}})
   const roles = await Role.findAll({attributes: ["level", "name"]})
-  res.json({users, roles})
+
+  res.json(users)
 })
 
 users.post('/add', async (req,res) => {
@@ -13,12 +19,11 @@ users.post('/add', async (req,res) => {
   const isNewMail = await User.findOne({where: {email: req.body.email}});
 
   if(isNewPseudo != null || isNewMail != null) {
-    res.json({error: true, message: 'User already exists'})
-    return false;
+    return res.json({error: true, message: 'User already exists'})
   }
 
-  const member = await User.create(req.body)
-  res.json(member)
+  const user = await User.create(req.body)
+  return res.json({success: true, message: "user added to database"})
 })
 
 users.get('/show/:id', async (req,res) => {

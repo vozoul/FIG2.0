@@ -11,28 +11,29 @@ const refreshToken = () => {
   return "sùldfkgmldfkglkfdjwglmkdwgkmljgkmljdqmljgfkmlwjglkdfwj";
 }
 
-export const encryptPWD = async (inner) => {
-  const out = inner
-  const {pwd} = inner
-  const hashed = await bcrypt.hash(pwd, 10)
-  out.pwd = hashed
-  return out;
+export const encryptPWD = async (pwd) => {
+  return await bcrypt.hash(pwd, 10)
 }
 
 const getHeader = () => {
   return {Authorization: 'Bearer ' + getToken() }
 }
 
-export const call = async (method, uri, data) => {
-  const request = {
+export const call = async (method, uri, options) => {
+  const req = {
     method: method,
     headers: getHeader(),
     url: uri,
-    data: data
+    data: options
   }
-  const payload = await axios(request)
-  return payload
+
+  return await axios(req)
 }
 
-export const authenticated = (user) => {}
-export const authRole = (user) => {}
+export const authenticated = (user) => {
+
+}
+
+export const authRole = (user) => {
+
+}

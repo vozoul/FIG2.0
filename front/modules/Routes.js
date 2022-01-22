@@ -14,7 +14,7 @@ Routes.use('/members', (req,res) => {
 Routes.use('/users', Users)
 Routes.use('/servers', Servers)
 Routes.use('/events', Events)
-Routes.use('*', (req,res) => {
+Routes.use('/*', (req,res) => {
   res.render('pages/404', {
     title: "Chemin incorrect/page introuvable",
     c404: true,
