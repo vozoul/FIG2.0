@@ -10,7 +10,6 @@ Routes.get('/',(req, res) => {
 })
 
 Routes.use('/users', Users)
-// Routes.use('/events', events)
 
 Routes.use('*', (req,res) => {
   res.status(500)

@@ -24,6 +24,7 @@ module.exports = (sequelize, DataTypes) => {
     pwd: DataTypes.STRING,
     bio: DataTypes.STRING,
     avatar: DataTypes.BLOB,
+    steamId: DataTypes.STRING,
     role: DataTypes.INTEGER
   }, {
     sequelize,

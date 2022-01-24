@@ -4,13 +4,25 @@ const User = require('../../models').User;
 const Role = require('../../models').Role;
 const cfg = require('../../config/team.json')
 
+
+
+users.post('/login', async (req, res) => {
+  console.log(req.body)
+  const data = await User.findOne({
+    attributes: ["id", "pseudo", "avatar", "steamId", "role"] ,
+    where: {pseudo: req.body.pseudo}
+  })
+  console.log(data)
+  res.json(data)
+})
+
 users.get('/all', async (req, res) => {
   lowestMember = cfg.minMember
-  const min = await Role.findOne({where: {name: lowestMember}})
-  const users = await User.findAll({attributes: ["id", "pseudo", "avatar", "role"] ,where: {role: {[Op.gt]: -1}}})
-  // const users = await User.findAll({attributes: ["id", "pseudo", "avatar", "role"] ,where: {role: {[Op.gt]: 300}}})
-  const roles = await Role.findAll({attributes: ["level", "name"]})
-
+  let min = await Role.findOne({where: {name: lowestMember}})
+  const users = await User.findAll({
+    attributes: ["id", "pseudo", "avatar", "steamId", "role"] ,
+    where: {role: {[Op.gt]: (min -1)}}
+  })
   res.json(users)
 })
 

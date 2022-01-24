@@ -16,8 +16,14 @@ export const login = async (req, res) => {
     });
   }
   if (req.method == "POST") {
-    // TODO try/catch a user from database
-    res.redirect("/");
+    console.log(req.body)
+    const ret = await call('post', apiURL + '/users/login', req.body)
+    console.log(ret)
+    res.render("pages/login", {
+      title: "Connexion",
+      login: true,
+      data: ret
+    })
   }
 };
 

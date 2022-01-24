@@ -36,6 +36,10 @@ module.exports = {
         allowNull: true,
         type: Sequelize.BLOB
       },
+      steamId: {
+        allowNull: true,
+        type: Sequelize.STRING
+      },
       role: {
         allowNull: false,
         type: Sequelize.INTEGER,

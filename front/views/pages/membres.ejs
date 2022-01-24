@@ -3,20 +3,31 @@
 <div class="module noTitle">
     <!-- <h2 class="module_title">Membres</h2> -->
     <div class="users">
-        <% if (data.users.length == 0){ %>
+        <% if (data.length == 0){ %>
         <div class="user_list">Aucun comptes disponible </div>
         <% } else { %>
         <ul class="user_list">
-            <% data.users.forEach(user => { %>
+            <% data.forEach(user => { %>
+            <% let prefixe = "" %>
+            <% if (user.level > 300) {prefixe = "[FIG] "} %>
                 <li>
-                    <%- user.pseudo %>
+                    <% if (user.level == 300) { prefixe = "[New FIG] "%>
+                        <img src="/img/svg/fig_bleu.svg" alt="New-fig"/>
+                    <% } else if (user.level > 300 && user.level != 700 && user.level != 1000) { %>
+                        <img src="/img/svg/fig_violet.svg" alt="New-fig"/>
+                    <% } else if (user.level == 700) { %>
+                        <img src="/img/svg/fig_orange.svg" alt="New-fig"/>
+                    <% } else if (user.level == 1000) { %>
+                        <img src="/img/svg/fig_rouge.svg" alt="New-fig"/>
+                    <% } %>
+                    <span><%= prefixe %><%= user.pseudo %></span>
                 </li>
             <% }); %>
         </ul>
         <% } %>
     </div>
     <div class="selector">
-        <% if ((data.users.length == 0)){  } else { %>
+        <% if ((data.length == 0)){  } else { %>
         <ul class="selector_list">
             <li class="selector_item"><a href="admins">
                 <img src="/img/svg/fig_rouge.svg" alt="">
