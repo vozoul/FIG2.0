@@ -7,11 +7,33 @@ const cfg = require('../../config/team.json')
 
 
 users.post('/login', async (req, res) => {
-  console.log(req.body)
-  const data = await User.findOne({
-    attributes: ["id", "pseudo", "avatar", "steamId", "role"] ,
+  // recherche l'utilisateur
+  let data = await User.findOne({
     where: {pseudo: req.body.pseudo}
   })
+
+  // verifie qu'il y'a un résultat
+  if (data === null) {
+    res.status(401)
+      .json({
+        error: true,
+        message: "Unavailable user"
+      })
+    return
+  }
+
+  // compare les mdps
+
+  // retire les informations privées
+  const protectedFields = JSON.parse(process.env.SHIELDED)
+  console.log(protectedFields)
+
+
+  protectedFields.forEach((key) => {
+    data[key] = undefined
+  })
+
+  // renvoie l'utilisateur
   console.log(data)
   res.json(data)
 })
